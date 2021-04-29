@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Registro</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link href="css/formulario.css" rel="stylesheet" type="text/css">
+</head>
+
+<body class="body">
+    <h1>Registro para equipo de futbol</h1>
+    
+    <form action="">
+        <!--<fieldset>
+            <legend>Ingresa tus datos</legend> -->
+            <div>
+                <label for="nombre">Nombre:</label>
+                <input type="text" name="nombre" required>
+                <br>
+
+                <label for="ap">Apellido paterno:</label>
+                <input type="text" name="ap" required>
+                <br>
+
+                <label for="am">Apellido materno:</label>
+                <input type="text" name="am" required>
+                <br>
+                <br>
+
+                <label for="edad">Edad:</label>     
+                <select id="edad" name="edad">       
+                        <option value="" selected="selected">selecciona</option>
+                        <option value="18">18</option>
+                        <option value="19">19</option>
+                        <option value="20">20</option>
+                        <option value="21">21</option>
+                        <option value="22">22</option>
+                        <option value="23">23</option>
+                        <option value="24">24</option>
+                        <option value="25">25</option>
+                </select>
+            </div>
+            <br>
+            <br>
+            
+            <div>
+                <label>¿Sufres de alguna enfermedad crónica?:</label>  
+                <br> 
+                <label>
+                    <input type="radio" id="si_r1" name="respuesta" value="si"> Si
+                </label>
+                <label>
+                    <input type="radio" id="no_r1" name="respuesta" value="no"> No
+                </label>
+            
+                <br>
+                <br>
+
+
+                <label>¿Sufres enfermedades del corazón?:</label>  
+                <br> 
+                <label>
+                    <input type="radio" id="si_r2" name="respuesta2" value="si"> Si
+                </label>
+                <label>
+                    <input type="radio" id="no_r2" name="respuesta2" value="no"> No
+                </label>
+                <br>
+                <br>
+
+                <label>¿Realizas algun tipo de ejercicio?:</label>  
+                <br> 
+                <label>
+                    <input type="radio" id="si_r3" name="respuesta3" value="si"> Si
+                </label>
+                <label>
+                    <input type="radio" id="no_r3" name="respuesta3" value="no"> No
+                </label>
+                <br>
+                <br>
+            </div>
+            <div>
+                <label>Elige la posicion en donde te desempeñarias:</label><br>  
+                <input class="check" name="cbportero" type="checkbox" />Portero<br />
+                <input class="check" name="cbdefensa" type="checkbox" />Defensa<br />            
+                <input name="cbmedio" type="checkbox" />Medio<br />
+                <input name="cbdelantero" type="checkbox" />Atacante<br>
+                <br>
+            </div>
+            <label>Acepto los terminos y condiciones</label><br>
+            <input id="checkaceptar"name="cbaceptar" type="checkbox" required>
+            
+            <br>
+
+            <br>
+            <input id="btn" class="button" type="submit"text="Enviar" onclick="pregunta()"/>
+            
+            
+            <script>
+                function pregunta(){                
+                    var res = window.confirm("¿Estas seguro de enviar este formulario?");
+                    if(res===true){
+                    document.submit();                        
+                    }
+                    else{
+                        window.alert("No se enviaron los datos");
+                    }
+
+                }
+            </script>  
+            
+        <!--</fieldset>  -->
+    </form>
+</body>
+</html>
